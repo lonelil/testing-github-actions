@@ -1,2 +1,2 @@
 const fs = require('fs');
-fs.writeFileSync('test.txt', `${Date.now}`);
+fs.writeFileSync('test.txt', `${new Date.toUTCString()}`);
