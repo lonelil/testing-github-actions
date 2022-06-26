@@ -22,19 +22,19 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: node index.js
+     - uses: actions/checkout@v3g
+     - name: Use Node.js ${{ matrix.node-version }}
+       uses: actions/setup-node@v3
+       with:
+         node-version: ${{ matrix.node-version }}
+         cache: 'npm'
+     - run: node index.js
     
-    - name: update file and push to remote
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+     - name: update file and push to remote
+       run: |
+         git config --global user.name "github-actions[bot]"
+         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add -A
-          git commit -m "Update test.txt"
-          git push
+         git add -A
+         git commit -m "Update test.txt"
+         git push
